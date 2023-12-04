@@ -1,0 +1,736 @@
+$borderBlack: 2px solid black;
+$borderWhite: 2px solid white;
+$borderBlackDotted: 2px dotted black;
+$borderWhiteDotted: 2px dotted white; 
+$inputColor: #A2CCC7;
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+
+.overly {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.573);
+    z-index: -5;
+}
+
+
+
+.loginBox {
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-align: center;
+    height: 100%;
+    z-index: 10;
+
+    h1 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+        color: white;
+        letter-spacing: 1px;
+        cursor: default;
+    }
+
+    .mainbox {
+        background-color: rgba(0, 0, 0, 0.61);
+        width: 30%;
+        margin: auto;
+        text-align: left;
+        padding: 1%;
+
+        form {
+
+            h1 {
+                color: white;
+            }
+
+            .inputs {
+                display: flex;
+                flex-direction: column;
+
+                .icon-input {
+                    position: relative;
+                  
+                    input {
+                      padding-left: 30px; /* Adjust the padding based on the icon size */
+                      font-family: Arial, FontAwesome;
+                      width: 100%;
+                    }
+                  
+                    &::before {
+                      content: "\f0e0"; /* Unicode character for the envelope icon */
+                      font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                      position: absolute;
+                      color: $inputColor;
+                      left: 10px; /* Adjust the position based on the desired space */
+                      top: 29%;
+                      transform: translateY(-50%);
+                      align-items: center;
+                    }
+                }
+
+                .icon-input2 {
+                    position: relative;
+                  
+                    input {
+                      padding-left: 30px; /* Adjust the padding based on the icon size */
+                      font-family: Arial, FontAwesome;
+                      width: 100%;
+                    }
+                  
+                    &::before {
+                      content: "\f3c1"; /* Unicode character for the envelope icon */
+                      font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                      position: absolute;
+                      color: $inputColor;
+                      left: 10px; /* Adjust the position based on the desired space */
+                      top: 29%;
+                      transform: translateY(-50%);
+                      align-items: center;
+                    }
+                }
+                  
+
+                input {
+                    background-color: rgba(0, 0, 0, 0);
+                    margin-bottom: 30px;
+                    padding: 15px;
+                    border: none;
+                    border-bottom: 1px solid white;
+                }
+                input::placeholder {
+                    color: $inputColor;
+                    font-size: 15px;
+                }
+                input:focus{
+                    outline: none;
+                    color: white;
+                }
+            }
+
+            .understuff {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                margin-top: 15px;
+
+                label {
+                    color: white;
+                    cursor: pointer;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            button {
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+                font-size: 15px;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                cursor: pointer;
+                border: none;
+
+                &:hover {
+                    background-color: #333;
+                    color: white;
+                }
+            }
+
+
+        }
+    }
+
+
+    .whatis {
+        margin-top: 10px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+    }
+
+    h5 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+
+        span {
+            letter-spacing: 1px;
+            color: $inputColor;
+        }
+
+
+    }
+
+    small {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: default;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:1115px) {
+    .loginBox {
+        border: 2px solid rgba(255, 255, 255, 0);
+        text-align: center;
+        height: 100%;
+        z-index: 10;
+    
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            color: white;
+            letter-spacing: 1px;
+        }
+    
+        .mainbox {
+            background-color: rgba(0, 0, 0, 0.61);
+            width: 40%;
+
+        }
+    
+    }
+
+}
+
+
+
+
+@media(max-width:1050px) {
+    .loginBox {
+        border: 2px solid rgba(255, 255, 255, 0);
+        text-align: center;
+        height: 100%;
+        z-index: 10;
+    
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            color: white;
+            letter-spacing: 1px;
+        }
+    
+        .mainbox {
+            background-color: rgba(0, 0, 0, 0.61);
+            width: 50%;
+            margin: auto;
+            text-align: left;
+            padding: 1%;
+    
+            form {
+    
+                h1 {
+                    color: white;
+                }
+    
+                .inputs {
+                    display: flex;
+                    flex-direction: column;
+    
+                    .icon-input {
+                        position: relative;
+                      
+                        input {
+                          padding-left: 30px; /* Adjust the padding based on the icon size */
+                          font-family: Arial, FontAwesome;
+                          width: 100%;
+                        }
+                      
+                        &::before {
+                          content: "\f0e0"; /* Unicode character for the envelope icon */
+                          font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                          position: absolute;
+                          color: $inputColor;
+                          left: 10px; /* Adjust the position based on the desired space */
+                          top: 29%;
+                          transform: translateY(-50%);
+                          align-items: center;
+                        }
+                    }
+    
+                    .icon-input2 {
+                        position: relative;
+                      
+                        input {
+                          padding-left: 30px; /* Adjust the padding based on the icon size */
+                          font-family: Arial, FontAwesome;
+                          width: 100%;
+                        }
+                      
+                        &::before {
+                          content: "\f3c1"; /* Unicode character for the envelope icon */
+                          font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                          position: absolute;
+                          color: $inputColor;
+                          left: 10px; /* Adjust the position based on the desired space */
+                          top: 29%;
+                          transform: translateY(-50%);
+                          align-items: center;
+                        }
+                    }
+                      
+    
+                    input {
+                        background-color: rgba(0, 0, 0, 0);
+                        margin-bottom: 30px;
+                        padding: 15px;
+                        border: none;
+                        border-bottom: 1px solid white;
+                    }
+                    input::placeholder {
+                        color: $inputColor;
+                        font-size: 15px;
+                    }
+                    input:focus{
+                        outline: none;
+                        color: white;
+                    }
+                }
+    
+                .understuff {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+    
+                    label {
+                        color: white;
+                        cursor: pointer;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+    
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+    
+                button {
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px;
+                    font-size: 15px;
+                    color: black;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: none;
+    
+                    &:hover {
+                        background-color: #333;
+                        color: white;
+                    }
+                }
+    
+    
+            }
+        }
+    
+    
+        .whatis {
+            margin-top: 10px;
+            margin-bottom: 50px;
+    
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+    
+            }
+        }
+    
+        h5 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        small {
+            color: white;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+}
+
+
+
+
+
+
+@media(max-width:900px) {
+    .loginBox {
+        border: 2px solid rgba(255, 255, 255, 0);
+        text-align: center;
+        height: 100%;
+        z-index: 10;
+    
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 40px;
+            color: white;
+            letter-spacing: 1px;
+        }
+    
+        .mainbox {
+            background-color: rgba(0, 0, 0, 0.61);
+            width: 70%;
+            margin: auto;
+            text-align: left;
+            padding: 1%;
+    
+            form {
+    
+                h1 {
+                    color: white;
+                }
+    
+                .inputs {
+                    display: flex;
+                    flex-direction: column;
+    
+                    .icon-input {
+                        position: relative;
+                      
+                        input {
+                          padding-left: 30px; /* Adjust the padding based on the icon size */
+                          font-family: Arial, FontAwesome;
+                          width: 100%;
+                        }
+                      
+                        &::before {
+                          content: "\f0e0"; /* Unicode character for the envelope icon */
+                          font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                          position: absolute;
+                          color: $inputColor;
+                          left: 10px; /* Adjust the position based on the desired space */
+                          top: 29%;
+                          transform: translateY(-50%);
+                          align-items: center;
+                        }
+                    }
+    
+                    .icon-input2 {
+                        position: relative;
+                      
+                        input {
+                          padding-left: 30px; /* Adjust the padding based on the icon size */
+                          font-family: Arial, FontAwesome;
+                          width: 100%;
+                        }
+                      
+                        &::before {
+                          content: "\f3c1"; /* Unicode character for the envelope icon */
+                          font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                          position: absolute;
+                          color: $inputColor;
+                          left: 10px; /* Adjust the position based on the desired space */
+                          top: 29%;
+                          transform: translateY(-50%);
+                          align-items: center;
+                        }
+                    }
+                      
+    
+                    input {
+                        background-color: rgba(0, 0, 0, 0);
+                        margin-bottom: 30px;
+                        padding: 15px;
+                        border: none;
+                        border-bottom: 1px solid white;
+                    }
+                    input::placeholder {
+                        color: $inputColor;
+                        font-size: 15px;
+                    }
+                    input:focus{
+                        outline: none;
+                        color: white;
+                    }
+                }
+    
+                .understuff {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+    
+                    label {
+                        color: white;
+                        cursor: pointer;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+    
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+    
+                button {
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px;
+                    font-size: 15px;
+                    color: black;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: none;
+    
+                    &:hover {
+                        background-color: #333;
+                        color: white;
+                    }
+                }
+    
+    
+            }
+        }
+    
+    
+        .whatis {
+            margin-top: 10px;
+            margin-bottom: 50px;
+    
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+    
+            }
+        }
+    
+        h5 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        small {
+            color: white;
+            margin-top: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+}
+
+
+
+
+
+
+@media(max-width:600px) {
+    .loginBox {
+        border: 2px solid rgba(255, 255, 255, 0);
+        text-align: center;
+        height: 100%;
+        z-index: 10;
+    
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: white;
+            letter-spacing: 1px;
+        }
+    
+        .mainbox {
+            background-color: rgba(0, 0, 0, 0.61);
+            width: 90%;
+            margin: auto;
+            text-align: left;
+            padding: 1%;
+    
+            form {
+    
+                h1 {
+                    color: white;
+                }
+    
+                .inputs {
+                    display: flex;
+                    flex-direction: column;
+    
+                    .icon-input {
+                        position: relative;
+                      
+                        input {
+                          padding-left: 30px; /* Adjust the padding based on the icon size */
+                          font-family: Arial, FontAwesome;
+                          width: 100%;
+                        }
+                      
+                        &::before {
+                          content: "\f0e0"; /* Unicode character for the envelope icon */
+                          font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                          position: absolute;
+                          color: $inputColor;
+                          left: 10px; /* Adjust the position based on the desired space */
+                          top: 29%;
+                          transform: translateY(-50%);
+                          align-items: center;
+                        }
+                    }
+    
+                    .icon-input2 {
+                        position: relative;
+                      
+                        input {
+                          padding-left: 30px; /* Adjust the padding based on the icon size */
+                          font-family: Arial, FontAwesome;
+                          width: 100%;
+                        }
+                      
+                        &::before {
+                          content: "\f3c1"; /* Unicode character for the envelope icon */
+                          font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
+                          position: absolute;
+                          color: $inputColor;
+                          left: 10px; /* Adjust the position based on the desired space */
+                          top: 29%;
+                          transform: translateY(-50%);
+                          align-items: center;
+                        }
+                    }
+                      
+    
+                    input {
+                        background-color: rgba(0, 0, 0, 0);
+                        margin-bottom: 30px;
+                        padding: 15px;
+                        border: none;
+                        border-bottom: 1px solid white;
+                    }
+                    input::placeholder {
+                        color: $inputColor;
+                        font-size: 15px;
+                    }
+                    input:focus{
+                        outline: none;
+                        color: white;
+                    }
+                }
+    
+                .understuff {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+    
+                    label {
+                        color: white;
+                        cursor: pointer;
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+    
+                    a {
+                        color: white;
+                        text-decoration: none;
+                        font-family: Arial, Helvetica, sans-serif;
+    
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+    
+                button {
+                    width: 100%;
+                    text-align: center;
+                    padding: 15px;
+                    font-size: 15px;
+                    color: black;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bold;
+                    cursor: pointer;
+                    border: none;
+    
+                    &:hover {
+                        background-color: #333;
+                        color: white;
+                    }
+                }
+    
+    
+            }
+        }
+    
+    
+        .whatis {
+            margin-top: 10px;
+            margin-bottom: 0px;
+    
+            a {
+                color: white;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+    
+                &:hover {
+                    text-decoration: underline;
+                }
+    
+            }
+        }
+    
+        h5 {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    
+        small {
+            color: white;
+            margin-top: 0px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+}

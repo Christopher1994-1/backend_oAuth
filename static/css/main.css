@@ -1,0 +1,590 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("/static/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.overly {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.573);
+  z-index: -5;
+}
+
+.loginBox {
+  border: 2px solid rgba(255, 255, 255, 0);
+  text-align: center;
+  height: 100%;
+  z-index: 10;
+}
+.loginBox h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  color: white;
+  letter-spacing: 1px;
+  cursor: default;
+}
+.loginBox .mainbox {
+  background-color: rgba(0, 0, 0, 0.61);
+  width: 30%;
+  margin: auto;
+  text-align: left;
+  padding: 1%;
+}
+.loginBox .mainbox form h1 {
+  color: white;
+}
+.loginBox .mainbox form .inputs {
+  display: flex;
+  flex-direction: column;
+}
+.loginBox .mainbox form .inputs .icon-input {
+  position: relative;
+}
+.loginBox .mainbox form .inputs .icon-input input {
+  padding-left: 30px; /* Adjust the padding based on the icon size */
+  font-family: Arial, FontAwesome;
+  width: 100%;
+}
+.loginBox .mainbox form .inputs .icon-input::before {
+  content: "\f0e0"; /* Unicode character for the envelope icon */
+  font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+  position: absolute;
+  color: #A2CCC7;
+  left: 10px; /* Adjust the position based on the desired space */
+  top: 29%;
+  transform: translateY(-50%);
+  align-items: center;
+}
+.loginBox .mainbox form .inputs .icon-input2 {
+  position: relative;
+}
+.loginBox .mainbox form .inputs .icon-input2 input {
+  padding-left: 30px; /* Adjust the padding based on the icon size */
+  font-family: Arial, FontAwesome;
+  width: 100%;
+}
+.loginBox .mainbox form .inputs .icon-input2::before {
+  content: "\f3c1"; /* Unicode character for the envelope icon */
+  font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+  position: absolute;
+  color: #A2CCC7;
+  left: 10px; /* Adjust the position based on the desired space */
+  top: 29%;
+  transform: translateY(-50%);
+  align-items: center;
+}
+.loginBox .mainbox form .inputs input {
+  background-color: rgba(0, 0, 0, 0);
+  margin-bottom: 30px;
+  padding: 15px;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.loginBox .mainbox form .inputs input::-moz-placeholder {
+  color: #A2CCC7;
+  font-size: 15px;
+}
+.loginBox .mainbox form .inputs input::placeholder {
+  color: #A2CCC7;
+  font-size: 15px;
+}
+.loginBox .mainbox form .inputs input:focus {
+  outline: none;
+  color: white;
+}
+.loginBox .mainbox form .understuff {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.loginBox .mainbox form .understuff label {
+  color: white;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.loginBox .mainbox form .understuff a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.loginBox .mainbox form .understuff a:hover {
+  text-decoration: underline;
+}
+.loginBox .mainbox form button {
+  width: 100%;
+  text-align: center;
+  padding: 15px;
+  font-size: 15px;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+.loginBox .mainbox form button:hover {
+  background-color: #333;
+  color: white;
+}
+.loginBox .whatis {
+  margin-top: 10px;
+}
+.loginBox .whatis a {
+  color: white;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.loginBox .whatis a:hover {
+  text-decoration: underline;
+}
+.loginBox h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.loginBox h5 span {
+  letter-spacing: 1px;
+  color: #A2CCC7;
+}
+.loginBox small {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: default;
+}
+
+@media (max-width: 1115px) {
+  .loginBox {
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-align: center;
+    height: 100%;
+    z-index: 10;
+  }
+  .loginBox h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .loginBox .mainbox {
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 40%;
+  }
+}
+@media (max-width: 1050px) {
+  .loginBox {
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-align: center;
+    height: 100%;
+    z-index: 10;
+  }
+  .loginBox h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .loginBox .mainbox {
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 50%;
+    margin: auto;
+    text-align: left;
+    padding: 1%;
+  }
+  .loginBox .mainbox form h1 {
+    color: white;
+  }
+  .loginBox .mainbox form .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .loginBox .mainbox form .inputs .icon-input {
+    position: relative;
+  }
+  .loginBox .mainbox form .inputs .icon-input input {
+    padding-left: 30px; /* Adjust the padding based on the icon size */
+    font-family: Arial, FontAwesome;
+    width: 100%;
+  }
+  .loginBox .mainbox form .inputs .icon-input::before {
+    content: "\f0e0"; /* Unicode character for the envelope icon */
+    font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+    position: absolute;
+    color: #A2CCC7;
+    left: 10px; /* Adjust the position based on the desired space */
+    top: 29%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .loginBox .mainbox form .inputs .icon-input2 {
+    position: relative;
+  }
+  .loginBox .mainbox form .inputs .icon-input2 input {
+    padding-left: 30px; /* Adjust the padding based on the icon size */
+    font-family: Arial, FontAwesome;
+    width: 100%;
+  }
+  .loginBox .mainbox form .inputs .icon-input2::before {
+    content: "\f3c1"; /* Unicode character for the envelope icon */
+    font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+    position: absolute;
+    color: #A2CCC7;
+    left: 10px; /* Adjust the position based on the desired space */
+    top: 29%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .loginBox .mainbox form .inputs input {
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 30px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .loginBox .mainbox form .inputs input::-moz-placeholder {
+    color: #A2CCC7;
+    font-size: 15px;
+  }
+  .loginBox .mainbox form .inputs input::placeholder {
+    color: #A2CCC7;
+    font-size: 15px;
+  }
+  .loginBox .mainbox form .inputs input:focus {
+    outline: none;
+    color: white;
+  }
+  .loginBox .mainbox form .understuff {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  .loginBox .mainbox form .understuff label {
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .mainbox form .understuff a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .mainbox form .understuff a:hover {
+    text-decoration: underline;
+  }
+  .loginBox .mainbox form button {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  .loginBox .mainbox form button:hover {
+    background-color: #333;
+    color: white;
+  }
+  .loginBox .whatis {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .loginBox .whatis a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .whatis a:hover {
+    text-decoration: underline;
+  }
+  .loginBox h5 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox small {
+    color: white;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+@media (max-width: 900px) {
+  .loginBox {
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-align: center;
+    height: 100%;
+    z-index: 10;
+  }
+  .loginBox h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .loginBox .mainbox {
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    padding: 1%;
+  }
+  .loginBox .mainbox form h1 {
+    color: white;
+  }
+  .loginBox .mainbox form .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .loginBox .mainbox form .inputs .icon-input {
+    position: relative;
+  }
+  .loginBox .mainbox form .inputs .icon-input input {
+    padding-left: 30px; /* Adjust the padding based on the icon size */
+    font-family: Arial, FontAwesome;
+    width: 100%;
+  }
+  .loginBox .mainbox form .inputs .icon-input::before {
+    content: "\f0e0"; /* Unicode character for the envelope icon */
+    font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+    position: absolute;
+    color: #A2CCC7;
+    left: 10px; /* Adjust the position based on the desired space */
+    top: 29%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .loginBox .mainbox form .inputs .icon-input2 {
+    position: relative;
+  }
+  .loginBox .mainbox form .inputs .icon-input2 input {
+    padding-left: 30px; /* Adjust the padding based on the icon size */
+    font-family: Arial, FontAwesome;
+    width: 100%;
+  }
+  .loginBox .mainbox form .inputs .icon-input2::before {
+    content: "\f3c1"; /* Unicode character for the envelope icon */
+    font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+    position: absolute;
+    color: #A2CCC7;
+    left: 10px; /* Adjust the position based on the desired space */
+    top: 29%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .loginBox .mainbox form .inputs input {
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 30px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .loginBox .mainbox form .inputs input::-moz-placeholder {
+    color: #A2CCC7;
+    font-size: 15px;
+  }
+  .loginBox .mainbox form .inputs input::placeholder {
+    color: #A2CCC7;
+    font-size: 15px;
+  }
+  .loginBox .mainbox form .inputs input:focus {
+    outline: none;
+    color: white;
+  }
+  .loginBox .mainbox form .understuff {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  .loginBox .mainbox form .understuff label {
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .mainbox form .understuff a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .mainbox form .understuff a:hover {
+    text-decoration: underline;
+  }
+  .loginBox .mainbox form button {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  .loginBox .mainbox form button:hover {
+    background-color: #333;
+    color: white;
+  }
+  .loginBox .whatis {
+    margin-top: 10px;
+    margin-bottom: 50px;
+  }
+  .loginBox .whatis a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .whatis a:hover {
+    text-decoration: underline;
+  }
+  .loginBox h5 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox small {
+    color: white;
+    margin-top: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}
+@media (max-width: 600px) {
+  .loginBox {
+    border: 2px solid rgba(255, 255, 255, 0);
+    text-align: center;
+    height: 100%;
+    z-index: 10;
+  }
+  .loginBox h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: white;
+    letter-spacing: 1px;
+  }
+  .loginBox .mainbox {
+    background-color: rgba(0, 0, 0, 0.61);
+    width: 90%;
+    margin: auto;
+    text-align: left;
+    padding: 1%;
+  }
+  .loginBox .mainbox form h1 {
+    color: white;
+  }
+  .loginBox .mainbox form .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+  .loginBox .mainbox form .inputs .icon-input {
+    position: relative;
+  }
+  .loginBox .mainbox form .inputs .icon-input input {
+    padding-left: 30px; /* Adjust the padding based on the icon size */
+    font-family: Arial, FontAwesome;
+    width: 100%;
+  }
+  .loginBox .mainbox form .inputs .icon-input::before {
+    content: "\f0e0"; /* Unicode character for the envelope icon */
+    font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+    position: absolute;
+    color: #A2CCC7;
+    left: 10px; /* Adjust the position based on the desired space */
+    top: 29%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .loginBox .mainbox form .inputs .icon-input2 {
+    position: relative;
+  }
+  .loginBox .mainbox form .inputs .icon-input2 input {
+    padding-left: 30px; /* Adjust the padding based on the icon size */
+    font-family: Arial, FontAwesome;
+    width: 100%;
+  }
+  .loginBox .mainbox form .inputs .icon-input2::before {
+    content: "\f3c1"; /* Unicode character for the envelope icon */
+    font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
+    position: absolute;
+    color: #A2CCC7;
+    left: 10px; /* Adjust the position based on the desired space */
+    top: 29%;
+    transform: translateY(-50%);
+    align-items: center;
+  }
+  .loginBox .mainbox form .inputs input {
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 30px;
+    padding: 15px;
+    border: none;
+    border-bottom: 1px solid white;
+  }
+  .loginBox .mainbox form .inputs input::-moz-placeholder {
+    color: #A2CCC7;
+    font-size: 15px;
+  }
+  .loginBox .mainbox form .inputs input::placeholder {
+    color: #A2CCC7;
+    font-size: 15px;
+  }
+  .loginBox .mainbox form .inputs input:focus {
+    outline: none;
+    color: white;
+  }
+  .loginBox .mainbox form .understuff {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    margin-top: 15px;
+  }
+  .loginBox .mainbox form .understuff label {
+    color: white;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .mainbox form .understuff a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .mainbox form .understuff a:hover {
+    text-decoration: underline;
+  }
+  .loginBox .mainbox form button {
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+  }
+  .loginBox .mainbox form button:hover {
+    background-color: #333;
+    color: white;
+  }
+  .loginBox .whatis {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+  .loginBox .whatis a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox .whatis a:hover {
+    text-decoration: underline;
+  }
+  .loginBox h5 {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .loginBox small {
+    color: white;
+    margin-top: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+}/*# sourceMappingURL=main.css.map */
