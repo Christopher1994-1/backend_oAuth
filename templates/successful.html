@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> <!-- Include Font Awesome 6 CSS -->
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="shortcut icon" href="/static/images/pp.ico" type="image/x-icon">
+    <title>Form Successful</title>
+</head>
+<body>
+
+    <div class="overly"></div>
+
+    <div class="endform">
+        <h1>Form Was Submitted Successfully</h1>
+        <h5>
+            When the form was submitted for user authentication, several steps occur in this process
+            of validating and verifying login details that are stored in a personal MySQL server database.
+            Below is a step-by-step list of what happened.
+        </h5>
+        <div class="list">
+
+            <div class="box">
+                <label for="">User Submission:</label>
+                <p>The user (you) fills out the login form on the client side, entering their email and password.</p>
+            </div>
+
+            <div class="box">
+                <label for="">Client-Side Validation:</label>
+                <p>Basic client-side validation is performed to ensure that required fields are not empty and that the entered email follows a valid format.</p>
+            </div>
+
+            <div class="box">
+                <label for="">Data Transmission:</label>
+                <p>The form data (email and password) is transmitted from the client side to the server side using a secure protocol, such as HTTPS, to protect the information during transit.</p>
+            </div>
+
+
+            <div class="box">
+                <label for="">Server-Side Handling:</label>
+                <p>The server receives the submitted data and starts processing the login request.</p>
+            </div>
+
+
+            <div class="box">
+                <label for="">Database Query:</label>
+                <p>The server queries the MySQL database to check if the entered email exists in the users' table.</p>
+            </div>
+
+
+            <div class="box">
+                <label for="">Email Existence Check:</label>
+                <p>If the email is not found in the database, the server may respond with an authentication error, indicating that the user account does not exist.</p>
+            </div>
+
+
+
+            <div class="box">
+                <label for="">Password Hash Retrieval:</label>
+                <p>If the email is found, the server retrieves the stored hashed password associated with that email from the database.</p>
+            </div>
+
+
+            <div class="box">
+                <label for="">Password Hash Comparison:</label>
+                <p>The server compares the hashed password stored in the database with the hash of the entered password from the submitted form. This is a crucial security step to ensure that the actual password is not transmitted or stored in plain text.</p>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>

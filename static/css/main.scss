@@ -8,9 +8,8 @@ body {
     margin: 0;
     padding: 0;
     background-image: url('/static/images/background.jpg');
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
-    height: 100%;
 }
 
 
@@ -22,6 +21,22 @@ body {
     z-index: -5;
 }
 
+
+.back {
+    position: absolute;
+
+    a {
+        color: $inputColor;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+}
 
 
 .loginBox {
@@ -54,6 +69,7 @@ body {
             .inputs {
                 display: flex;
                 flex-direction: column;
+                margin-bottom: 0px;
 
                 .icon-input {
                     position: relative;
@@ -70,7 +86,7 @@ body {
                       position: absolute;
                       color: $inputColor;
                       left: 10px; /* Adjust the position based on the desired space */
-                      top: 29%;
+                      top: 32%;
                       transform: translateY(-50%);
                       align-items: center;
                     }
@@ -90,8 +106,9 @@ body {
                       font-family: 'FontAwesome'; /* Font family for Font Awesome Regular */
                       position: absolute;
                       color: $inputColor;
+                      margin-right: 1px;
                       left: 10px; /* Adjust the position based on the desired space */
-                      top: 29%;
+                      top: 44%;
                       transform: translateY(-50%);
                       align-items: center;
                     }
@@ -100,10 +117,14 @@ body {
 
                 input {
                     background-color: rgba(0, 0, 0, 0);
-                    margin-bottom: 30px;
+                    margin-bottom: 0px;
                     padding: 15px;
                     border: none;
                     border-bottom: 1px solid white;
+                }
+
+                #emailInputID {
+                    margin-bottom: 20px;
                 }
                 input::placeholder {
                     color: $inputColor;
@@ -112,6 +133,35 @@ body {
                 input:focus{
                     outline: none;
                     color: white;
+                    background-color: #33333300;
+                }
+                input:not(:focus) {
+                    color: white;
+                    background-color: #33333300;
+                }
+            }
+
+            .showpwd {
+                margin-top: 5px;
+                display: flex;
+                justify-content: end;
+                margin-bottom: 5px;
+
+                i {
+                    width: 12%;
+                    font-size: 20px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    color: $inputColor;
+                    padding: 5px;
+
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                #hidePass {
+                    display: none;
                 }
             }
 
@@ -182,6 +232,7 @@ body {
         span {
             letter-spacing: 1px;
             color: $inputColor;
+            background-color: rgba(0, 0, 0, 0.638);
         }
 
 
@@ -195,6 +246,68 @@ body {
 }
 
 
+
+.endform {
+    padding: 10px;
+
+    h1 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h5 {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        column-gap: 20px;
+
+        .box {
+            background-color: #a2ccc77d;
+            padding: 10px;
+            border-radius: 5px;
+
+            label {
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        }
+
+    }
+}
+
+
+
+
+
+.messages {
+    position: absolute;
+    top: 10%;
+    left: 50%; /* Adjust left to 50% */
+    transform: translate(-50%, -50%); /* Update transform property */
+    padding: 10px;
+    background-color: $inputColor;
+    border-radius: 10px;
+    width: 80%;
+    border: $borderBlack;
+    display: none;
+
+    h5 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        color: rgb(0, 0, 0);
+        text-align: center;
+    }
+}
 
 
 
@@ -562,6 +675,21 @@ body {
         }
     }
 
+    .endform {
+        padding: 10px;
+
+    
+    
+        .list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+    
+    
+        }
+    }
+
 }
 
 
@@ -730,6 +858,22 @@ body {
             color: white;
             margin-top: 0px;
             font-family: Arial, Helvetica, sans-serif;
+        }
+    }
+
+
+    .endform {
+        padding: 10px;
+
+    
+    
+        .list {
+            display: grid;
+            grid-template-columns: 1fr;
+            row-gap: 20px;
+            column-gap: 20px;
+    
+    
         }
     }
 

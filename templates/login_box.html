@@ -2,7 +2,7 @@
 
     <h1>Advanced Login Form</h1>
     <div class="mainbox">
-        <form action="" id="mainForm">
+        <form action="{{ url_for('submission_successful') }}" id="mainForm">
         <h1>Login</h1>
 
         <div class="inputs">
@@ -12,6 +12,11 @@
               <div class="icon-input2">
                 <input type="password" placeholder=" Password" id="passwordID">
               </div>
+        </div>
+
+        <div class="showpwd" id="showpwdID">
+            <i class="fa-solid fa-eye" id="showPass" onclick="show_password('show')"></i>
+            <i class="fa-solid fa-eye-slash" id="hidePass" onclick="show_password('hide')"></i>
         </div>
 
         <div class="understuff">
@@ -28,9 +33,9 @@
     </div>
 
     <div class="whatis">
-        <a href="#">How's it work?</a>
+        <a href="{{ url_for('howsItWork') }}">How's it work?</a>
     </div>
 
-    <h5>Test Email: <span>test@testmail.com</span> | Test Password: <span>testpassword098</span></h5>
+    <h5><span>Test Email: test@testmail.com</span> | <span>Test Password: testpassword098</span></h5>
     <small>&copy; 2023-{{year}} CEJ Van Niekirk. All Rights Reserved | Design by CEJ Van Niekirk</small>
 </div>

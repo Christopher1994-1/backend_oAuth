@@ -4,7 +4,6 @@ body {
   background-image: url("/static/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100%;
 }
 
 .overly {
@@ -13,6 +12,20 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.573);
   z-index: -5;
+}
+
+.back {
+  position: absolute;
+}
+.back a {
+  color: #A2CCC7;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+.back a:hover {
+  color: white;
+  text-decoration: underline;
 }
 
 .loginBox {
@@ -41,6 +54,7 @@ body {
 .loginBox .mainbox form .inputs {
   display: flex;
   flex-direction: column;
+  margin-bottom: 0px;
 }
 .loginBox .mainbox form .inputs .icon-input {
   position: relative;
@@ -56,7 +70,7 @@ body {
   position: absolute;
   color: #A2CCC7;
   left: 10px; /* Adjust the position based on the desired space */
-  top: 29%;
+  top: 32%;
   transform: translateY(-50%);
   align-items: center;
 }
@@ -73,17 +87,21 @@ body {
   font-family: "FontAwesome"; /* Font family for Font Awesome Regular */
   position: absolute;
   color: #A2CCC7;
+  margin-right: 1px;
   left: 10px; /* Adjust the position based on the desired space */
-  top: 29%;
+  top: 44%;
   transform: translateY(-50%);
   align-items: center;
 }
 .loginBox .mainbox form .inputs input {
   background-color: rgba(0, 0, 0, 0);
-  margin-bottom: 30px;
+  margin-bottom: 0px;
   padding: 15px;
   border: none;
   border-bottom: 1px solid white;
+}
+.loginBox .mainbox form .inputs #emailInputID {
+  margin-bottom: 20px;
 }
 .loginBox .mainbox form .inputs input::-moz-placeholder {
   color: #A2CCC7;
@@ -96,6 +114,31 @@ body {
 .loginBox .mainbox form .inputs input:focus {
   outline: none;
   color: white;
+  background-color: rgba(51, 51, 51, 0);
+}
+.loginBox .mainbox form .inputs input:not(:focus) {
+  color: white;
+  background-color: rgba(51, 51, 51, 0);
+}
+.loginBox .mainbox form .showpwd {
+  margin-top: 5px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 5px;
+}
+.loginBox .mainbox form .showpwd i {
+  width: 12%;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #A2CCC7;
+  padding: 5px;
+}
+.loginBox .mainbox form .showpwd i:hover {
+  color: white;
+}
+.loginBox .mainbox form .showpwd #hidePass {
+  display: none;
 }
 .loginBox .mainbox form .understuff {
   display: flex;
@@ -149,11 +192,62 @@ body {
 .loginBox h5 span {
   letter-spacing: 1px;
   color: #A2CCC7;
+  background-color: rgba(0, 0, 0, 0.638);
 }
 .loginBox small {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   cursor: default;
+}
+
+.endform {
+  padding: 10px;
+}
+.endform h1 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.endform h5 {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.endform .list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.endform .list .box {
+  background-color: rgba(162, 204, 199, 0.4901960784);
+  padding: 10px;
+  border-radius: 5px;
+}
+.endform .list .box label {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.endform .list .box p {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.messages {
+  position: absolute;
+  top: 10%;
+  left: 50%; /* Adjust left to 50% */
+  transform: translate(-50%, -50%); /* Update transform property */
+  padding: 10px;
+  background-color: #A2CCC7;
+  border-radius: 10px;
+  width: 80%;
+  border: 2px solid black;
+  display: none;
+}
+.messages h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  color: rgb(0, 0, 0);
+  text-align: center;
 }
 
 @media (max-width: 1115px) {
@@ -449,6 +543,16 @@ body {
     margin-top: 50px;
     font-family: Arial, Helvetica, sans-serif;
   }
+  .endform {
+    padding: 10px;
+  }
+  .endform .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
+  }
 }
 @media (max-width: 600px) {
   .loginBox {
@@ -586,5 +690,15 @@ body {
     color: white;
     margin-top: 0px;
     font-family: Arial, Helvetica, sans-serif;
+  }
+  .endform {
+    padding: 10px;
+  }
+  .endform .list {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
